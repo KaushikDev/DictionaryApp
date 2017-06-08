@@ -1,0 +1,122 @@
+<html>
+<head>
+<title>Dictionary App</title>
+ <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Rancho&effect=shadow-multiple|3d-float" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/daneden/animate.css/master/animate.min.css">
+	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+</head>
+<body onload="init()" background="https://wallpaperscraft.com/image/beach_tropics_sea_sand_summer_84726_1920x1080.jpg" style="background-size:100% 100%;">
+<style>
+.margin{
+padding:5px;
+border-style:transparent;
+border-width:1px;
+border-color:gray;
+margin-top:10px;
+margin-bottom:10px;
+margin-left:auto;
+margin-right:auto;
+text-align:center;
+height:auto;
+width:auto;
+margin: 0 auto;
+font-size:35px;
+color: black;
+}
+
+.curved{
+border-radius:5px;
+}
+</style>
+<div class="container-fluid">
+
+<div class="row text-center" style="margin-top:0px;">
+<div class="col-xs-12">
+<h1>Dictionary App</h1>
+</div>
+</div>
+
+<div id="searchBox" class="row text-center" style="margin-top:10px;">
+<div class="col-xs-12">
+<input type="text" class="curved" id="searchBox" style="color:black; width:250px;" placeholder='Enter your word here...E.g. Rendezvous'>
+<button class="btn curved" id="searchBtn"><i class="fa fa-search" aria-hidden="true"></i> Find</button>
+
+</div>
+</div>
+
+<div class="row text-center" style="margin-top:10px;">
+<div class="col-xs-12">
+<p id="display"></p>
+</div>
+</div>
+
+
+
+
+<div class="row text-center" style="margin-top:10px;">
+<div class="col-xs-12">
+<button class="btn curved" id="clearBtn" onclick="clean()"><i class="fa fa-times" aria-hidden="true"></i> Clear Search</button>
+</div>
+</div>
+
+  <div class="row text-center" style="margin-top:10px;">
+<div class="col-xs-12">
+<p><i class="fa fa-copyright" aria-hidden="true"></i>KaushikCodeArts : App by Piyush Kaushik</p>
+</div>
+</div>
+  <div class="row text-center">
+                <div class="col-xs-12">
+				<a id="fb" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="https://www.facebook.com/sharer/sharer.php?u=https://codepen.io/Kaushik02/full/Myvgqd/" target="_blank"><i class="fa fa-facebook" aria-hidden="true" style="color:blue;font-size:30px;font-weight:bold;"></i></a>
+                <a id="whatsapp" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="whatsapp://send?text=https://codepen.io/Kaushik02/full/Myvgqd/"><i class="fa fa-whatsapp" aria-hidden="true" style="color:Green;font-size:30px;font-weight:bold;"></i></a>
+        		<a id="tweet" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="https://twitter.com/home?status=https://codepen.io/Kaushik02/full/Myvgqd/" target="_blank"><i class="fa fa-twitter" aria-hidden="true" style="color:skyblue;font-size:30px;font-weight:bold;"></i></a>
+                </div>
+        </div>
+</div>
+<script type="text/javascript">
+
+
+var show = document.getElementById("display").innerHTML ; 
+
+ $("document").ready(function(){
+   $("#searchBtn").on("click", function(){
+   var word_id = document.getElementById("searchBox").value ;
+   var baseUrlOxfordAPI="https://od-api.oxforddictionaries.com:443/api/v1/entries/en/";
+   var completeUrl = baseUrlOxfordAPI + word_id + "?app_id=5f4b9413&app_key=646e132dc3f1bd4798f12a0750dbf592";
+   document.getElementById("clearBtn").disabled= false;
+
+   clean();
+   $.getJSON(completeUrl, function(data){
+    
+	show.innerHTML = data;
+   
+   });
+   
+   });
+ 
+ }); 
+  
+function init(){
+document.getElementById("clearBtn").disabled= true;
+}
+
+
+function clean(){
+document.getElementById("clearBtn").disabled= true;
+document.getElementById("searchBox").value="";
+cleanSlate();
+
+}
+
+
+function cleanSlate(){
+
+}
+</script>
+</body>
+
+</html>
