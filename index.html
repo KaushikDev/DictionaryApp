@@ -11,13 +11,11 @@
 	<script src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
 
 </head>
-<body style="background-size:100% 100%;background-color:white;font-family:Rancho">
+<body style="background-color:white;font-family:Rancho;color:black">
 <style>
+	
 .margin{
 padding:5px;
-border-style:transparent;
-border-width:1px;
-border-color:gray;
 margin-top:10px;
 margin-bottom:10px;
 margin-left:auto;
@@ -26,30 +24,28 @@ height:auto;
 width:auto;
 margin: 0 auto;
 font-size:35px;
-font-family:Rancho;
-color: black;
 }
 
 .curved{
 border-radius:5px;
-}
-
-h1{
-font-family:Rancho;
-color:black;
-}
-
-.btn, input{
 font-size:30px;
 }
+
+#displayArea{
+height: 65%;
+overflow-y:auto;
+}
 	
-	#displayArea{
-	height: 75%;
-	}	
+i{
+color:black;
+font-size:30px;
+font-weight:bold;	
+}	
+	
 </style>
 <div class="container-fluid">
 
-<div class="row text-center" style="margin-top:0px;">
+<div class="row text-center">
 <div class="col-xs-12">
 <h1>Dictionary App</h1>
 </div>
@@ -57,8 +53,8 @@ font-size:30px;
 
 <div class="row text-center" style="margin-top:10px;">
 <div class="col-xs-12">
-<input type="text" class="curved" id="searchBox" style="color:black; width:250px;border-radius:5px;" placeholder='Enter your word here..'>
-<button class="btn curved" id="searchBtn" style="color:black; border-radius:5px;background:transparent"><i class="fa fa-search" aria-hidden="true"></i></button>
+<input type="text" class="curved" id="searchBox" style="width:250px;" placeholder='Enter your word here..'>
+<button class="btn curved" id="searchBtn" style="background:transparent"><i class="fa fa-search" aria-hidden="true"></i></button>
 
 </div>
 </div>
@@ -70,9 +66,9 @@ font-size:30px;
 
   <div class="row text-center">
                 <div class="col-xs-12">
-				<a id="fb" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="https://www.facebook.com/sharer/sharer.php?u=https://KaushikDev.github.io/DictionaryApp" target="_blank"><i class="fa fa-facebook" aria-hidden="true" style="color:blue;font-size:30px;font-weight:bold;"></i></a>
-                <a id="whatsapp" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="whatsapp://send?text=https://KaushikDev.github.io/DictionaryApp"><i class="fa fa-whatsapp" aria-hidden="true" style="color:Green;font-size:30px;font-weight:bold;"></i></a>
-        		<a id="tweet" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="https://twitter.com/home?status=https://KaushikDev.github.io/DictionaryApp" target="_blank"><i class="fa fa-twitter" aria-hidden="true" style="color:skyblue;font-size:30px;font-weight:bold;"></i></a>
+			<a id="fb" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="https://www.facebook.com/sharer/sharer.php?u=https://KaushikDev.github.io/DictionaryApp" target="_blank"><i class="fa fa-facebook"></i></a>
+                	<a id="whatsapp" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="whatsapp://send?text=https://KaushikDev.github.io/DictionaryApp"><i class="fa fa-whatsapp"></i></a>
+        		<a id="tweet" class="btn btn-default text-center" style="background-color:transparent;border-color:transparent;" href="https://twitter.com/home?status=https://KaushikDev.github.io/DictionaryApp" target="_blank"><i class="fa fa-twitter"></i></a>
                 </div>
         </div>
 	
