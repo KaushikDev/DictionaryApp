@@ -1,4 +1,3 @@
-
 var ID;
 var headWord;
 var baseUrlPearsonAPI;
@@ -31,8 +30,8 @@ var base = "https://api.pearson.com";
 		
 	baseUrlPearsonAPI=  base + "/v2/dictionaries/ldoce5/entries?headword=";
     completeUrl = baseUrlPearsonAPI + headWord + "&apikey=12nCr8Cz5m0wkpTgi3Pkh18Cd596Slga";
-	//document.getElementById("clearBtn").disabled = false;
-    console.log("The complete request URL is : " + completeUrl);
+
+  //  console.log("The complete request URL is : " + completeUrl);
    
     
    $.getJSON(completeUrl, function(data){
