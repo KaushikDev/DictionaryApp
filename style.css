@@ -721,12 +721,13 @@ hr {
   align-items: center;
   justify-content: space-between;
   width: 90%;
-  height: auto;
+  height: 1em;
 }
 
 .footer-class {
- 
-  padding: 5px;
+  border-radius: 5px;
+  font-size: 1em;
+  padding: 0px;
   background: inherit;
   text-decoration: none;
   color: goldenrod;
