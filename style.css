@@ -1,0 +1,672 @@
+* {
+  padding: 0;
+  margin: 0;
+  background: #ffc;
+}
+/* Cover Page CSS */
+#cover {
+  width: 100%;
+  height: 100%;
+  visibility: visible;
+}
+
+#back-cover {
+  position: absolute;
+  background: #ddd;
+  border: 7px solid gray;
+  border-radius: 10px;
+  top: 60px;
+  left: 500px;
+  bottom: 60px;
+  width: calc(100% - 1000px);
+  height: auto;
+}
+
+#book-cover {
+  position: absolute;
+  border-radius: 10px;
+  top: 50px;
+  left: 500px;
+  bottom: 50px;
+  width: calc(100% - 1000px);
+  height: auto;
+  z-index: 2;
+  display: flex;
+}
+
+#left-side {
+  width: 20%;
+  background: linear-gradient(
+    90deg,
+    #800000,
+    #8b4513,
+    #cd853f,
+    #d2b48c,
+    #deb887,
+    #f5deb3,
+    #ffdead
+  );
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+
+#right-side {
+  width: 80%;
+  background: linear-gradient(
+    90deg,
+    #deb887,
+    #d2b48c,
+    #cd853f,
+    #8b4513,
+    #800000
+  );
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+#header {
+  background: transparent;
+  width: 100%;
+  height: 30%;
+  border-top-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.cover-para-class {
+  background: transparent;
+  color: #fff;
+  font-size: 3em;
+  font-family: "Sacramento", cursive;
+  text-shadow: 2px 2px 2px black;
+}
+
+p > sup {
+  background: transparent;
+}
+
+#body {
+  background: transparent;
+  width: 100%;
+  height: 70%;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#define {
+  background: transparent;
+  font-family: "Sacramento", cursive;
+  color: goldenrod;
+  text-shadow: 2px 2px 2px black;
+  font-size: 5em;
+}
+
+hr {
+  width: 80%;
+  border: 1px solid goldenrod;
+}
+
+/* Main Page CSS */
+
+#main {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+#pages {
+  position: absolute;
+  background: transparent;
+  border-radius: 20px;
+  top: 60px;
+  left: 300px;
+  bottom: 60px;
+  width: calc(100% - 600px);
+  height: auto;
+  display: flex;
+}
+
+#left-page {
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  border-right: 20px solid #800000;
+  align-items: center;
+  justify-content: center;
+}
+
+#right-page {
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-left: 20px solid #800000;
+  overflow: auto;
+  color: black;
+}
+
+.page-class {
+  width: 50%;
+  border: 2px solid #800000;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.left-page-class {
+  margin: 10px;
+  background: transparent;
+  font-family: "Sacramento", cursive;
+}
+
+#searchArea {
+  background: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80%;
+}
+
+#searchLabel {
+  font-size: 1.5em;
+  text-decoration: underline;
+  color: goldenrod;
+}
+
+#searchBox {
+  width: 80%;
+  height: auto;
+  font-size: 2em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-radius: 5px;
+}
+
+#searchBtn {
+  width: auto;
+  height: auto;
+  font-size: 1.5em;
+  border-radius: 5px;
+  background: goldenrod;
+}
+
+#footerArea {
+  background: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+}
+
+.footer-class {
+  padding: 10px;
+  background: inherit;
+  text-decoration: none;
+  color: goldenrod;
+  border: none;
+}
+
+/* CSS for dynamic html */
+
+#displayArea {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: transparent;
+}
+
+#sound-btn {
+  background: inherit;
+  font-size: 2em;
+}
+
+.fa {
+  background: inherit;
+}
+
+.fa-volume-up {
+  color: green;
+}
+
+.fa-volume-off {
+  color: red;
+}
+
+.label-class {
+  background: inherit;
+  font-size: 2em;
+  align-self: flex-start;
+  text-decoration: underline;
+  font-family: "Sacramento", cursive;
+  color: goldenrod;
+}
+
+.para-class {
+  background: inherit;
+  font-size: 1em;
+  align-self: flex-start;
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+/* ======================== */
+/* media queries begin here */
+/* ======================== */
+/* ======================== */
+/* media for mobile devices with min-width=450px and  max-width=550px*/
+@media (min-width: 451px) and (max-width: 550px) {
+  /* Cover Page CSS */
+  #back-cover {
+    position: absolute;
+    background: #ddd;
+    border: 7px solid gray;
+    border-radius: 10px;
+    top: 10px;
+    left: 20px;
+    bottom: 10px;
+    width: calc(100% - 40px);
+    height: auto;
+  }
+
+  #book-cover {
+    position: absolute;
+    border-radius: 10px;
+    top: 5px;
+    left: 20px;
+    bottom: 5px;
+    width: calc(100% - 40px);
+    height: auto;
+    z-index: 2;
+    display: flex;
+  }
+
+  /* Main Page CSS */
+
+  #pages {
+    position: absolute;
+    background: transparent;
+    border-radius: 20px;
+    top: 10px;
+    left: 5px;
+    bottom: 10px;
+    width: calc(100% - 10px);
+    height: auto;
+    display: flex;
+  }
+}
+/* ======================== */
+/* ======================== */
+/* media for mobile devices with min-width=550px and  max-width=650px*/
+@media (min-width: 551px) and (max-width: 650px) {
+  /* Cover Page CSS */
+  #back-cover {
+    position: absolute;
+    background: #ddd;
+    border: 7px solid gray;
+    border-radius: 10px;
+    top: 10px;
+    left: 40px;
+    bottom: 10px;
+    width: calc(100% - 80px);
+    height: auto;
+  }
+
+  #book-cover {
+    position: absolute;
+    border-radius: 10px;
+    top: 5px;
+    left: 40px;
+    bottom: 5px;
+    width: calc(100% - 80px);
+    height: auto;
+    z-index: 2;
+    display: flex;
+  }
+
+  /* Main Page CSS */
+
+  #pages {
+    position: absolute;
+    background: transparent;
+    border-radius: 20px;
+    top: 10px;
+    left: 5px;
+    bottom: 10px;
+    width: calc(100% - 10px);
+    height: auto;
+    display: flex;
+  }
+}
+/* ======================== */
+/* ======================== */
+/* media for mobile devices with min-width=650px and  max-width=750px*/
+@media (min-width: 651px) and (max-width: 750px) {
+  /* Cover Page CSS */
+  #back-cover {
+    position: absolute;
+    background: #ddd;
+    border: 7px solid gray;
+    border-radius: 10px;
+    top: 10px;
+    left: 15%;
+    bottom: 10px;
+    width: calc(100% - 30%);
+    height: auto;
+  }
+
+  #book-cover {
+    position: absolute;
+    border-radius: 10px;
+    top: 5px;
+    left: 15%;
+    bottom: 5px;
+    width: calc(100% - 30%);
+    height: auto;
+    z-index: 2;
+    display: flex;
+  }
+
+  /* Main Page CSS */
+
+  #pages {
+    position: absolute;
+    background: transparent;
+    border-radius: 20px;
+    top: 10px;
+    left: 2%;
+    bottom: 10px;
+    width: calc(100% - 4%);
+    height: auto;
+    display: flex;
+  }
+}
+/* ======================== */
+/* ======================== */
+/* media for mobile devices with min-width=750px and  max-width=1024px*/
+@media (min-width: 751px) and (max-width: 1024px) {
+  /* Cover Page CSS */
+  #back-cover {
+    position: absolute;
+    background: #ddd;
+    border: 7px solid gray;
+    border-radius: 10px;
+    top: 10px;
+    left: 20%;
+    bottom: 10px;
+    width: calc(100% - 40%);
+    height: auto;
+  }
+
+  #book-cover {
+    position: absolute;
+    border-radius: 10px;
+    top: 5px;
+    left: 20%;
+    bottom: 5px;
+    width: calc(100% - 40%);
+    height: auto;
+    z-index: 2;
+    display: flex;
+  }
+
+  /* Main Page CSS */
+
+  #pages {
+    position: absolute;
+    background: transparent;
+    border-radius: 20px;
+    top: 10px;
+    left: 2%;
+    bottom: 10px;
+    width: calc(100% - 4%);
+    height: auto;
+    display: flex;
+  }
+}
+/* ======================== */
+/* media for mobile devices with min-width=1025px and  max-width=1200px*/
+@media (min-width: 1025px) and (max-width: 1200px) {
+  /* Cover Page CSS */
+  #back-cover {
+    position: absolute;
+    background: #ddd;
+    border: 7px solid gray;
+    border-radius: 10px;
+    top: 10px;
+    left: 30%;
+    bottom: 10px;
+    width: calc(100% - 60%);
+    height: auto;
+  }
+
+  #book-cover {
+    position: absolute;
+    border-radius: 10px;
+    top: 5px;
+    left: 30%;
+    bottom: 5px;
+    width: calc(100% - 60%);
+    height: auto;
+    z-index: 2;
+    display: flex;
+  }
+
+  /* Main Page CSS */
+
+  #pages {
+    position: absolute;
+    background: transparent;
+    border-radius: 20px;
+    top: 10px;
+    left: 10%;
+    bottom: 10px;
+    width: calc(100% - 20%);
+    height: auto;
+    display: flex;
+  }
+}
+
+/* ======================== */
+/* media for mobile devices with min-width=320px and  max-width=450px*/
+@media (max-width: 450px) {
+  /* Cover Page CSS */
+  #cover {
+    width: 100%;
+    height: 100%;
+    visibility: visible;
+  }
+
+  #back-cover {
+    position: absolute;
+    background: #ddd;
+    border: 7px solid gray;
+    border-radius: 10px;
+    top: 20px;
+    left: 20px;
+    bottom: 20px;
+    width: calc(100% - 40px);
+    height: auto;
+  }
+
+  #book-cover {
+    position: absolute;
+    border-radius: 10px;
+    top: 10px;
+    left: 20px;
+    bottom: 10px;
+    width: calc(100% - 40px);
+    height: auto;
+    z-index: 2;
+    display: flex;
+  }
+
+  #define {
+    background: transparent;
+    font-family: "Sacramento", cursive;
+    color: goldenrod;
+    text-shadow: 2px 2px 2px black;
+    font-size: 3.5em;
+  }
+
+  /* Main Page CSS */
+
+#main {
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+}
+
+#pages {
+  position: absolute;
+  background: transparent;
+  border-radius: 20px;
+  top: 5px;
+  left: 5px;
+  bottom: 5px;
+  width: calc(100% - 10px);
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#left-page {
+  height: 40%;
+  border-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-right: 2px solid #800000;
+  border-bottom: 10px solid #800000;
+  align-items: center;
+  justify-content: center;
+}
+
+#right-page {
+  height: 60%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-left-radius: 20px;
+  border-top: 10px solid #800000;
+  border-left: 2px solid #800000;
+  overflow: auto;
+  color: black;
+}
+
+.page-class {
+  width: 100%;
+  border: 2px solid #800000;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.left-page-class {
+  margin: 10px;
+  background: transparent;
+  font-family: "Sacramento", cursive;
+}
+
+#searchArea {
+  border-radius: 20px;
+  background: inherit;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 80%;
+}
+
+#searchLabel {
+  font-size: 1.5em;
+  text-decoration: underline;
+  color: goldenrod;
+}
+
+#searchBox {
+  width: 80%;
+  height: auto;
+  font-size: 1.5em;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  border-radius: 5px;
+}
+
+#searchBtn {
+  width: auto;
+  height: auto;
+  font-size: 1.5em;
+  border-radius: 5px;
+  background: goldenrod;
+}
+
+#footerArea {
+  margin: 30px;
+  background: inherit;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  height: auto;
+}
+
+.footer-class {
+ 
+  padding: 10px;
+  background: inherit;
+  text-decoration: none;
+  color: goldenrod;
+  border: none;
+  }
+
+  /* CSS for dynamic html */
+
+  #displayArea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: transparent;
+  }
+
+  #sound-btn {
+    background: inherit;
+    font-size: 2em;
+  }
+
+  .fa {
+    background: inherit;
+  }
+
+  .fa-volume-up {
+    color: green;
+  }
+
+  .fa-volume-off {
+    color: red;
+  }
+
+  .label-class {
+    background: inherit;
+    font-size: 2em;
+    align-self: flex-start;
+    text-decoration: underline;
+    font-family: "Sacramento", cursive;
+    color: goldenrod;
+  }
+
+  .para-class {
+    background: inherit;
+    font-size: 1em;
+    align-self: flex-start;
+    font-family: Georgia, "Times New Roman", Times, serif;
+  }
+}
+/* ======================== */
